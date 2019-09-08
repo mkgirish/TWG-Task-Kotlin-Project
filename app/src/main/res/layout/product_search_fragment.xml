@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+    <ProgressBar
+            android:id="@+id/pb_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/progressbar_refresh"
+            android:foregroundGravity="center_horizontal|center_vertical"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical|center_horizontal"/>
+    <android.support.v7.widget.SearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@null"
+            app:queryHint="Search The Warehouse"
+            app:searchIcon="@null"
+            app:showDividers="none"
+            app:submitBackground="@null"
+            android:background="@drawable/rectangle_box">
+
+    </android.support.v7.widget.SearchView>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/search_view"
+    android:layout_marginTop="40dp">
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:animateLayoutChanges="false"
+            />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

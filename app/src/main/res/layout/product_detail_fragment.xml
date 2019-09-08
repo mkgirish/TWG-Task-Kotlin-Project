@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/ll_product_detail_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shadow">
+
+        <ProgressBar
+                android:id="@+id/pb_load"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateDrawable="@drawable/progressbar_refresh"
+                android:foregroundGravity="center_horizontal|center_vertical"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical|center_horizontal"/>
+
+        <ImageView
+                android:id="@+id/iv_product"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="left"
+                android:layout_marginTop="30dp"
+                android:contentDescription="Thumbnail"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_pic_place_holder"
+                android:background="@drawable/shadow"
+                />
+
+        <TextView
+                android:id="@+id/tv_product"
+                style="@style/ProductDetailCommonTextView"
+                android:layout_marginTop="15dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"
+                android:layout_below="@+id/iv_product"/>
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    style="@style/ProductDetailCommonTextView"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"
+                    android:layout_toRightOf="@+id/iv_product"
+                    android:layout_marginTop="@dimen/marign_top"/>
+
+            <ImageView
+                    android:id="@+id/iv_clearance"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:contentDescription="Thumbnail"
+                    android:src="@drawable/ic_clearance"
+                    android:visibility="gone"
+                    android:layout_toRightOf="@+id/tv_price"
+                    android:layout_marginTop="@dimen/marign_top"/>
+
+       <!-- </LinearLayout>-->
+
+        <!--<include
+                layout="@layout/item_separate_line_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp" />-->
+
+        <TextView
+                style="@style/ProductDetailCommonTextView"
+                android:text="Barcode:"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_below="@+id/tv_product"
+                android:id="@+id/tv_barcodeText"/>
+
+        <TextView
+                android:id="@+id/tv_barcode"
+                style="@style/ProductDetailCommonTextView"
+                android:layout_marginTop="5dp"
+                android:textColor="#333333"
+                android:textSize="13sp"
+                android:layout_below="@+id/tv_product"
+                android:layout_toRightOf="@+id/tv_barcodeText"/>
+        <TextView
+                style="@style/ProductDetailCommonTextView"
+                android:text="SubDept:"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_below="@+id/tv_barcodeText"
+                android:id="@+id/tv_subDeptText"/>
+
+        <TextView
+                android:id="@+id/tv_SubDept"
+                style="@style/ProductDetailCommonTextView"
+                android:layout_marginTop="5dp"
+                android:textColor="#333333"
+                android:textSize="13sp"
+                android:layout_toRightOf="@+id/tv_subDeptText"
+                android:layout_below="@+id/tv_barcodeText"/>
+
+
+    </RelativeLayout>
+
